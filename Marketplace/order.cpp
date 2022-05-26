@@ -14,7 +14,22 @@ void order::assignOrder(cart_type p) {
 
 	for (int i = 0; i < global.sellers.size(); i++) {
 		if (global.sellers[i].getID() == p.cart_products.seller_id) {
-			global.sellers[i].orders.push_back(this->getDetails());
+
+			
+
+			OrderDetails myOrder;
+			myOrder.name = this->getDetails().name;
+			myOrder.address = this->getDetails().address;
+			myOrder.phone = this->getDetails().phone;
+			myOrder.products.push_back(p);
+
+			cout << "The ID: " << p.cart_products.id<<endl;
+
+			/*for (int i = 0; i < temp.products.size(); i++) {
+				cout << "The ID: " << temp.products[i].cart_products.id << endl;
+			}*/
+
+			global.sellers[i].orders.push_back(myOrder);
 			
 
 		}
