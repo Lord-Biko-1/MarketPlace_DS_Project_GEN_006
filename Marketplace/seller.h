@@ -1,6 +1,8 @@
 #pragma once
 #include<iostream>
 #include<deque>
+#include <chrono>
+#include<ctime>
 #include "user.h"
 #include "product.h"
 #include "cart.h"
@@ -10,6 +12,8 @@ struct OrderDetails {
 	string address;
 	string phone;
 	vector<cart_type> products;
+	char tmBuff[31];
+
 };
 
 class seller : public user

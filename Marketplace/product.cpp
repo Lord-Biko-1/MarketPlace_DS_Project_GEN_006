@@ -99,3 +99,36 @@ deque<product_type> product::searchByName(string searched_name) {
 		return searched_que;
 	}
 }
+
+deque<product_type> product::ViewProductForSeller(int selid)
+{
+	bool found = false;
+
+	deque <product_type> ProductForSameSeller;
+
+	int i = 0;
+	while (i < prod.capacity()) {
+
+		if (prod[i].seller_id ==selid) {
+			ProductForSameSeller.push_back(prod[i]);
+			cout << "----------------------------------------" << endl;
+			cout << "creation date" << prod[i].tmBuff << endl;
+			cout << "Product ID: " << prod[i].id << endl;
+			cout << "Product Name: " << prod[i].name << endl;
+			cout << "Product Price: " << prod[i].price << endl;
+			cout << "Product Category: " << prod[i].category << endl;
+			cout << "Product Quantity: " << prod[i].quantity << endl;
+			cout << "Product Seller: " << prod[i].seller_id << endl;
+			cout << "----------------------------------------" << endl;
+			found = true;
+		}
+		i++;
+
+	}
+	if (!found) {
+		cout << "sorry no products to show \n";
+	}
+	while (!ProductForSameSeller.empty()) {
+		return ProductForSameSeller;
+	}
+}

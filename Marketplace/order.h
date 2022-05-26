@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <chrono>
+#include <ctime>
 #include "seller.h"
 #include "Globals.h"
 #include "cart.h"
@@ -19,7 +21,7 @@ class order
 	vector<product_type> orderProducts;
 	order(string name, string address, string phone, vector<cart_type> products) {
 		
-
+	
 		orderDetails.name = name;
 		orderDetails.address = address;
 		orderDetails.phone = phone;
@@ -31,7 +33,7 @@ class order
 				bool available = myCart.updateQuantity(products[i].cart_products.id, products[i].ordered_quantity);
 				if (available) {
 					assignOrder(products[i]);
-					cout << "Product " << products[i].cart_products.name << " Confirmed" << endl;
+					cout << "Product --> " << products[i].cart_products.name << " <--Confirmed" << endl;
 
 				}
 			}

@@ -13,6 +13,7 @@ struct product_type {
 	string category;
 	int quantity;
 	int seller_id;
+	char tmBuff[30];
 
 };
 
@@ -29,6 +30,7 @@ class product
 		void delete_products(int deleted_id);
 		deque<product_type> searchByCategory(string searched_category);
 		deque<product_type> searchByName(string searched_name);
+		deque<product_type> ViewProductForSeller(int selid);
 
 		
 

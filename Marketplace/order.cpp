@@ -15,7 +15,9 @@ void order::assignOrder(cart_type p) {
 	for (int i = 0; i < global.sellers.size(); i++) {
 		if (global.sellers[i].getID() == p.cart_products.seller_id) {
 
-			
+			auto start = std::chrono::system_clock::now();
+			auto legacyStart = std::chrono::system_clock::to_time_t(start);
+			ctime_s(orderDetails.tmBuff, sizeof(orderDetails.tmBuff), &legacyStart);
 
 			OrderDetails myOrder;
 			myOrder.name = this->getDetails().name;

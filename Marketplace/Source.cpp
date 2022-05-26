@@ -2,17 +2,20 @@
 #include <Windows.h> 
 #include <string>
 #include <vector>
+#include <ctime>
 #include "auth.h"
 #include "login.cpp"
 #include "Globals.h";
 #include "Customer.h"
 #include <iomanip>
+#pragma warning(disable : 4996)
 using namespace std;
 static vector<Customer> customers;
 
 int main() {
+	time_t t = time(NULL);
+	cout << ctime(&t);
 	system("color 0A");
-	
 	Globals glob = Globals();
 	seller loggedSeller = seller("s","s@.","1");
 	Customer loggedCustomer = Customer("c", "c@.", "1", "c", "2");
