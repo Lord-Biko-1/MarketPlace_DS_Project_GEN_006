@@ -12,7 +12,7 @@ struct OrderDetails {
 	string address;
 	string phone;
 	vector<cart_type> products;
-	char tmBuff[31];
+	string tmBuff;
 
 };
 
