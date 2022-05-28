@@ -48,21 +48,21 @@ bool cart::removeFromCart(int removed_id) {
 
 void  cart::promoPrice(string promocode)
 {
-	string text;
-	cout << "entre promo code to get your discount : ";
-	cin >> text;
-	for (int i = 0; i < promo.capacity() - 1; i++)
+	bool discount = false;
+
+	for (int i = 0; i < promo.capacity(); i++)
 	{
-		if (promo[i] == text)
+		if (promo[i] == promocode)
 		{
 			totalPrice -= 30;
 			cout << "you have a 30 pounds discount.." << endl;
-			cout << "your total price is :" << totalPrice << endl;
+			cout << "\n your total price is :" << totalPrice << endl;
+			discount = true;
 		}
-		else
-		{
-			cout << "invalide promo code" << endl;
-		}
+	}
+	if (!discount)
+	{
+		cout << "invalide promo code" << endl;
 	}
 }
 void  cart::displayTotalPrice()
@@ -85,14 +85,10 @@ void  cart::displayTotalPrice()
 	cin >> ch;
 	if (ch=='y')
 	{
-		cout << "entre promo code :";
+		cout << "entre promo code to get your discount :";
 		cin.ignore();
 		getline(cin, promo);
 		promoPrice(promo);
-	}
-	else
-	{
-		cout << "go to main menu" << endl;
 	}
 }//saif //saif
 
