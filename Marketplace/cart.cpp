@@ -13,12 +13,12 @@ cart::cart(void)
 bool cart::updateQuantity(int prodID, int q) {
 	for (int i = 0; i < myProd.prod.size(); i++) {
 		if (myProd.prod[i].id == prodID) {
-			if (myProd.prod[i].quantity > q) {
+			if (myProd.prod[i].quantity >= q) {
 				myProd.prod[i].quantity -= q;
 				return true;
 			}
 			else {
-				cout << "No sufficient stock";
+				cout << "No sufficient stock\n";
 				return false;
 			}
 		}
