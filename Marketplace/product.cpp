@@ -80,12 +80,14 @@ deque<product_type> product::searchByName(string searched_name) {
 		
 		if (prod[i].name.compare(searched_name) == 0) {
 			searched_que.push_back(prod[i]);
+			cout << "---------------------------------------------------" << endl;
 			cout << "Product ID: " << prod[i].id << endl;
 			cout << "Product Name: " << prod[i].name << endl;
 			cout << "Product Price: " << prod[i].price << endl;
 			cout << "Product Category: " << prod[i].category << endl;
 			cout << "Product Quantity: " << prod[i].quantity << endl;
 			cout << "Product Seller: " << prod[i].seller_id << endl;
+			cout << "---------------------------------------------------" << endl;
 
 			found = true;
 		}
