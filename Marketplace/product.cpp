@@ -34,10 +34,10 @@ void product::delete_products(int deleted_id) {
 		i++;
 	}
 	if (found) {
-		cout << "deleted successfly \n";
+		cout << "deleted successflly \n";
 	}
 	else {
-		cout << "sorry we not found this product \n";
+		cout << "sorry Product not found \n";
 	}
 }
 
@@ -47,7 +47,7 @@ deque<product_type> product::searchByCategory(string searched_category){
 	deque <product_type> searched_que;
 
 	int i = 0;
-	while(i < prod.capacity()) {
+	while(i < prod.size()) {
 		if (prod[i].category.compare(searched_category)==0) {
 			searched_que.push_back(prod[i]);
 			cout << "---------------------------------------------------" << endl;
@@ -76,7 +76,7 @@ deque<product_type> product::searchByName(string searched_name) {
 	deque <product_type> searched_que;
 
 	int i = 0;
-	while (i < prod.capacity()) {
+	while (i < prod.size()) {
 		
 		if (prod[i].name.compare(searched_name) == 0) {
 			searched_que.push_back(prod[i]);
@@ -109,12 +109,12 @@ deque<product_type> product::ViewProductForSeller(int selid)
 	deque <product_type> ProductForSameSeller;
 
 	int i = 0;
-	while (i < prod.capacity()) {
+	while (i < prod.size()) {
 
 		if (prod[i].seller_id ==selid) {
 			ProductForSameSeller.push_back(prod[i]);
 			cout << "----------------------------------------" << endl;
-			cout << "creation date" << prod[i].tmBuff << endl;
+			cout << "creation date: " << prod[i].tmBuff<< endl;
 			cout << "Product ID: " << prod[i].id << endl;
 			cout << "Product Name: " << prod[i].name << endl;
 			cout << "Product Price: " << prod[i].price << endl;

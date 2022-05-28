@@ -100,8 +100,9 @@ void Customer::Order_Screen() {
 		cout << endl;
 		cout << "1 - Search for a product by name.\n";
 		cout << "2 - Search for a product by category.\n";
-		cout << "3 - View or Confirm Cart.\n";
-		cout << "4 - Sign Out.\n";
+		cout << "3 - View List of Products.\n";
+		cout << "4 - View or Confirm Cart.\n";
+		cout << "5 - Sign Out.\n";
 		cout << endl;
 
 		int choice;
@@ -151,9 +152,13 @@ void Customer::Order_Screen() {
 			} while (ch != 0);
 		}
 		else if (choice == 3) {
-			viewCart();
+			viewProduct();
 		}
 		else if (choice == 4) {
+			viewCart();
+		}
+		else if (choice==5)
+		{
 			break;
 		}
 		cout << "Enter 0 to back to menu\n";

@@ -8,21 +8,22 @@
 #include "Globals.h";
 #include "Customer.h"
 #include <iomanip>
-#pragma warning(disable : 4996)
+#pragma warning(disable : 4996) // <------- to disable the unsafe error for ctime method 
 using namespace std;
 static vector<Customer> customers;
 
 int main() {
 	time_t t = time(NULL);
-	cout << ctime(&t);
-	system("color 09");
+	system("color B5");
 	Globals glob = Globals();
 	seller loggedSeller = seller("s","s@.","1");
 	Customer loggedCustomer = Customer("c", "c@.", "1", "c", "2");
 	
 	int enterChois;
 	do {
-		std::cout.width(65); std::cout << std::right <<"ON THE MARKET" << '\n';
+		
+		std::cout.width(120); std::cout << std::right << ctime(&t);
+		std::cout.width(72); std::cout << std::right <<"(______ON THE MARKET_____)" << '\n';
 		cout << "Enter 1 for Register\nEnter 2 for Login\n" << endl;
 		cin >> enterChois;
 		if (enterChois == 1) {
