@@ -2,13 +2,7 @@
 
 
 
-seller order::getSeller(int id) {
-	for (int i = 0; i < global.sellers.size(); i++) {
-		if (global.sellers[i].getID() == id) {
-			return global.sellers[i];
-		}
-	}
-}
+
 
 void order::assignOrder(cart_type p) {
 
@@ -28,11 +22,7 @@ void order::assignOrder(cart_type p) {
 			myOrder.products.push_back(p);
 			myOrder.tmBuff = tempDate;
 
-			cout << "The ID: " << p.cart_products.id<<endl;
-
-			/*for (int i = 0; i < temp.products.size(); i++) {
-				cout << "The ID: " << temp.products[i].cart_products.id << endl;
-			}*/
+			
 
 			global.sellers[i].orders.push_back(myOrder);
 			
@@ -40,6 +30,5 @@ void order::assignOrder(cart_type p) {
 		}
 	}
 	
-	//seller mySeller = getSeller(p.seller_id);
 	
 }

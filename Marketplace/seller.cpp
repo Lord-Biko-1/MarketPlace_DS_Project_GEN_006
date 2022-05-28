@@ -154,7 +154,6 @@ product_type seller::addingProduct()
 			cout << "product category :" << orders[i].products[0].cart_products.category << endl;
 			cout << "product price :" << orders[i].products[0].cart_products.price << endl;
 			cout << "product quentity :" << orders[i].products[0].ordered_quantity << endl;
-			cout << "product Seller Id :" << orders[i].products[0].cart_products.seller_id << endl;
 			
 			cout << "-------------------------------------------------------" << endl;
 

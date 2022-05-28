@@ -17,7 +17,6 @@ deque<product_type> Customer::browseByCategory() {
 	string searchCat;
 	cin.ignore();
 	getline(cin, searchCat);
-	//cin >> searchCat;
 	deque<product_type> q = myProduct.searchByCategory(searchCat);
 
 	return q;
@@ -28,7 +27,6 @@ deque<product_type> Customer::browseByName() {
 	string searchName;
 	cin.ignore();
 	getline(cin, searchName);
-	//cin >> searchName;
 	deque<product_type> q = myProduct.searchByName(searchName);
 	
 

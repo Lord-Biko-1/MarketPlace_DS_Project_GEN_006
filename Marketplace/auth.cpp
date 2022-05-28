@@ -24,29 +24,24 @@ Customer customerRegister(vector<Customer>& customers) {
 	cin.ignore();
 	cout << "Enter Your Name" << endl;
 	getline(cin, temp.name);
-	//cin >> temp.name;
 
 	do {
 		cout << "enter your email" << endl;
 		getline(cin, temp.email);
 
-		//cin >> temp.email;
 	} while (emailValidation(temp.email) == false);
 
 	cout << "Enter Your Password" << endl;
 	getline(cin, temp.password);
 
-	//cin >> temp.password;
 
 	cout << "Enter Address" << endl;
 	getline(cin, temp.address);
 
-	//cin >> temp.address;
 
 	cout << "Enter Phone" << endl;
 	getline(cin, temp.phone);
 
-	//cin >> temp.phone;
 
 	Customer createdCustomer = Customer(temp.name, temp.email, temp.password, temp.address, temp.phone);
 	customers.push_back(createdCustomer);
@@ -64,18 +59,15 @@ seller sellerRegister(vector<seller>& sellers) {
 	cout << "enter your name" << endl;
 	getline(cin, temp.name);
 
-	//cin >> temp.name;
 	
 	do {
 		cout << "enter your email" << endl;
 		getline(cin, temp.email);
 
-		//cin >> temp.email;
 	} while (emailValidation(temp.email) == false);
 	cout << "enter your password" << endl;
 	getline(cin, temp.password);
 
-	//cin >> temp.password;
 
 	seller createdseller = seller(temp.name, temp.email, temp.password);
 	sellers.push_back(createdseller);
@@ -83,31 +75,6 @@ seller sellerRegister(vector<seller>& sellers) {
 }
 
 
-seller sellerLogin(vector<seller>& sellers) {
-	string enteredemail;
-	string enteredpassword;
-
-	cout << "enter email" << endl;
-	cin >> enteredemail;
-	cout << "enter password" << endl;
-	cin >> enteredpassword;
-
-	int i = 0;
-	while (i != sellers.capacity()) {
-		if (sellers[i].getEmail() == enteredemail && sellers[i].getPassword() == enteredpassword) {
-			return sellers[i];
-		}
-		else {
-
-			break;
-		}
-		i++;
-
-	}
-	cout << "invalid login details";
-	
-	
-}
 
 
 

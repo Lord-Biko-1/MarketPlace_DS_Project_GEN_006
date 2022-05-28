@@ -89,31 +89,7 @@ int main() {
 		
 	} while (true);
 
-	/*seller newSeller = seller("seif", "s@.", "s");
-
-	Globals global = Globals();
-
-	global.addSeller(newSeller);
-
-	cout << "Sellers: " << global.sellers.size() << endl;
-	cout << &global.sellers << endl;
-
-	product_type createdProduct = newSeller.addingProduct();
-	Customer newCustomer = Customer("ss", "ss@.", "ss", "Cairo", "010");
-	newCustomer.addProductToCart(createdProduct);
-	cout<< "Cart: " << newCustomer.mycart.prod.size() << endl;
-	newCustomer.confirmOrder();
-
-	cout << "from main " << newSeller.orders.size() << endl;
-	cout << "befoooooor front method " <<  endl;
-
-	cout << "from main " << newSeller.orders.front().name << endl;
-	cout << "before omran loop" << endl;
-
-	for (auto o : newSeller.orders) {
-		cout << "Order Name " << o.products[0].name << endl;
-	}
-	newSeller.showOrder();*/
+	
 	return 0;
 }
 

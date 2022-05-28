@@ -64,7 +64,7 @@ void  cart::promoPrice(string promocode)
 			cout << "invalide promo code" << endl;
 		}
 	}
-} //saif
+}
 void  cart::displayTotalPrice()
 {
 	double temp = 0;

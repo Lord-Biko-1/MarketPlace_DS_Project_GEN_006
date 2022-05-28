@@ -45,7 +45,6 @@ class order
 		return this->orderDetails;
 	}
 
-	seller getSeller(int id);
 	void assignOrder(cart_type p);
 
 };
