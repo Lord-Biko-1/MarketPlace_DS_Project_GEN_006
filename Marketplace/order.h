@@ -33,8 +33,7 @@ class order
 				bool available = myCart.updateQuantity(products[i].cart_products.id, products[i].ordered_quantity);
 				if (available) {
 					assignOrder(products[i]);
-					cout << "Product --> " << products[i].cart_products.name << " <--Confirmed" << endl;
-
+					cout << "Product --> " << products[i].cart_products.name << "--> Confirmed" << endl;
 				}
 			}
 			

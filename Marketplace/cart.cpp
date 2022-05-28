@@ -52,11 +52,12 @@ void  cart::promoPrice(string promocode)
 
 	for (int i = 0; i < promo.capacity(); i++)
 	{
-		if (promo[i] == promocode)
+		if (promo[i] == promocode )
+
 		{
 			totalPrice -= 30;
 			cout << "you have a 30 pounds discount.." << endl;
-			cout << "\n your total price is :" << totalPrice << endl;
+			cout << "\n your total price is :" << totalPrice << " .L.E"<<endl;
 			discount = true;
 		}
 	}
@@ -83,12 +84,17 @@ void  cart::displayTotalPrice()
 	cout << "total price is :" << totalPrice <<" .L.E" << endl;
 	cout << "do you have a promo code ? (y/n)";
 	cin >> ch;
-	if (ch=='y')
+	if (totalPrice>=100 && ch == 'y')
 	{
-		cout << "entre promo code to get your discount :";
-		cin.ignore();
-		getline(cin, promo);
-		promoPrice(promo);
+			cout << "entre promo code to get your discount :";
+			cin.ignore();
+			getline(cin, promo);
+			promoPrice(promo);
 	}
+	else if (totalPrice<100 && ch == 'y')
+	{
+		cout << "Sorry your total price less than 100 .L.E " << endl;
+	}
+	
 }//saif //saif
 
